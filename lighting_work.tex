@@ -1,0 +1,82 @@
+\documentclass[FinalProj,english,12pt]{ulthese}
+  %% Encodage utilisé pour les caractères accentués dans les fichiers
+  %% source du document. Les gabarits sont encodés en UTF-8. Inutile avec
+  %% XeLaTeX, qui gère Unicode nativement.
+  \usepackage[utf8]{inputenc}
+
+  %% Charger ici les autres paquetages nécessaires pour le document.
+  %% Quelques exemples; décommenter au besoin.
+  \usepackage{amsmath}          % recommandé pour les mathématiques
+  \usepackage{icomma}           % gestion de la virgule dans les nombres
+
+  %% Utilisation d'une autre police de caractères pour le document.
+  %% - Sous LaTeX
+  %\usepackage{mathpazo}         % texte et mathématiques en Palatino
+  \usepackage{mathptmx}         % texte et mathématiques en Times
+
+  %% Gestion des hyperliens dans le document. S'assurer que hyperref
+  %% est le dernier paquetage chargé.
+  \usepackage[hyphens]{url}
+  \usepackage{hyperref}
+  \hypersetup{colorlinks,allcolors=ULlinkcolor}
+
+  %% Enable multirow in the table
+  \usepackage{multirow}
+
+  %% Add the degree symbol among others
+  \usepackage{gensymb}
+
+  %% Use multiple equation references
+  \usepackage{cleveref}
+
+  %% Style de la bibliographie.
+  \bibliographystyle{ieeetr}
+
+  %% Forcing displaystyle for all math in the documento
+  \everymath{\displaystyle}
+
+  %% Déclarations de la page titre. Remplacer les éléments entre < >.
+  %% Supprimer les caractères < >. Couper un long titre ou un long
+  %% sous-titre manuellement avec \\.
+  \titre{Indoor soccer pitches lighting design}
+  \soustitre{Official 5x5 size indoor soccer pitch with timber floor}
+  \auteur{Tiberio Menezes de Oliveira}
+  \email{tmoliveira@nyx-hemera.com}
+  \univcotutelle{François-Xavier Morin}
+  \programme{Lighting course}
+  \annee{2015}
+
+\begin{document}
+
+\frontmatter                    % pages liminaires
+
+\pagetitre                      % production de la page titre
+
+\tableofcontents                % production de la TdM
+\clearpage
+
+\listoftables                   % production de la liste des tableaux
+\clearpage
+
+\listoffigures                  % production de la liste des figures
+\clearpage
+
+\mainmatter                     % corps du document
+
+\include{introduction}          % introduction
+\include{chapter1}              % chapitre 1
+\include{chapter2}              % chapitre 2
+\include{chapter3}              % chapitre 3
+\include{chapter4}              % chapitre 4
+\include{chapter5}              % chapitre 5
+\include{chapter6}              % chapitre 6
+\include{chapter7}              % chapitre 7
+\include{chapter8}              % chapitre 8
+
+\appendix                       % annexes le cas échéant
+
+\include{appendix}              % annexe A
+
+\bibliography{lighting_work}    % production de la bibliographie
+
+\end{document}

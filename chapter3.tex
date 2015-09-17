@@ -1,0 +1,122 @@
+\chapter{Recommendations and Common Calculus}
+
+\section{Recommendations}
+Based on an analysis of various luminaires available on the market and, taking into account the recommendations from~\cite{www:fifa_light_spec}, a luminaires of high pressure sodium (HPS) would be the best choice. However, if the project is aiming for a long term maintenance, the led luminaires would be considered as the best choice. The initial cost for HPS luminaires is low and its operation cost is not so high, a client seeking the least amount of initial investment will choose the HPS luminaires. In contrast, even though the led luminaires have the higher initial investment cost, on the other hand, have the lowest operation cost, and its economy provided by the low cost operation would pay for the initial investment before its first relamping.
+
+The following luminaires were chosen for this work:
+\begin{itemize}
+  \item Lithonia IBH 30000LM SD080 MD MVOLT GZ10 40K 70CRI~\cite{www:led_spec}
+  \item Lithonia FGB24 6 54T5HO N1D20~\cite{www:fluo_lumin_spec,www:fluo_lamp_spec}
+  \item Lithonia TH 400M PA22 SCWA (LEG = 8, SC = 1.3)~\cite{www:mh_hps_lumin_spec,www:mh_lamp_spec}
+  \item Lithonia TH 400S PA22 (LEG = 8, SC = 1.4)~\cite{www:mh_hps_lumin_spec,www:hps_lamp_spec}
+\end{itemize}
+All the luminaires listed are intended to be used in indoor facilities and they can be used in a gymnasium, because of those characteristics all the luminaires could be used for the purpose of this project.
+
+\section{Common Calculus}
+\subsection{Cavity Calculus}
+In order to calculate the cavity ratio for the project's facility, the Equation~\ref{eq:cavity_ratio} will be used.
+
+\begin{equation}
+CR = \frac{5 \times H \times (L + W)}{L \times W}
+\label{eq:cavity_ratio}
+\end{equation}
+
+The values of $H$, $L$ and $W$ is showed on Figure~\ref{fig:cavity_dimensions}, so the $H$ depends of the cavity that will be calculated, and $L = 53$ and $W = 185$.
+
+In order to calculate the interpolation or extrapolation, the Lagrange theorem for linear interpolation and extrapolation, represented by Equation~\ref{eq:lagrange}, will be used.
+
+\begin{equation}
+f(x) = \frac{x_2 - x}{x_2 - x_1} \times y_1 +
+       \frac{x - x_1}{x_2 - x_1} \times y_2
+\label{eq:lagrange}
+\end{equation}
+
+The facility's reflectance cavities are $\rho_c=70\%$, $\rho_w=50\%$ and $\rho_f=20\%$.
+
+\subsubsection{Ceiling Cavity Ratio Calculus}
+The value of $H$ for the ceiling cavity ratio ($CCR$) is $0.5m$, and the calculus for $CCR$ is expressed on Equation~\ref{eq:ccr}.
+
+\begin{equation}
+\begin{split}
+CCR & = \frac{5 \times 0.5 \times (53 + 185)}{53 \times 183} \\
+ & = \frac{2.5 \times 238}{9805} \\
+ & = 0.061 \\
+ & \approx 0.06
+\end{split}
+\label{eq:ccr}
+\end{equation}
+
+\subsubsection{Ceiling Reflectance Calculus}
+Using the table for effective ceiling or floor cavity reflectances frr various reflectance combinations, available on the course material of the course, a linear extrapolation using the Equation~\ref{eq:lagrange} will be calculated in order to find the value of the ceiling cavity reflectance ($\rho_{cc}$). The Equation~\ref{eq:reflectance_cc} shows the calculus.
+
+\begin{equation}
+\begin{split}
+x &= 0.06; \\
+x_1 &= 0.2; \\ y_1 &= 67 \\
+x_2 &= 0.4; \\ y_2 &= 65
+\end{split}
+\qquad
+\begin{split}
+f(x) &= \frac{x_2 - x}{x_2 - x_1} \times y_1 +
+       \frac{x - x_1}{x_2 - x_1} \times y_2 \\
+ &= \frac{0.4 - 0.06}{0.4 - 0.2} \times 67 +
+    \frac{0.06 - 0.2}{0.4 - 0.2} \times 65 \\
+ &= \frac{0.34}{0.2} \times 67 -
+    \frac{0.14}{0.2} \times 65 \\
+ & = 1.7 \times 67 - 0.7 \times 65 \\
+ & = 68.4 \\
+\rho_{cc} & = 68.4
+\end{split}
+\label{eq:reflectance_cc}
+\end{equation}
+
+\subsubsection{Room Cavity Ratio Calculus}
+The value of $H$ for the room cavity ratio ($RCR$) is $7.3m$, and the calculus for $RCR$ is expressed on Equation~\ref{eq:rcr}.
+
+\begin{equation}
+\begin{split}
+RCR & = \frac{5 \times 7.3 \times (53 + 185)}{53 \times 183} \\
+ & = \frac{36.5 \times 238}{9805} \\
+ & = 0.886 \\
+ & \approx 0.89
+\end{split}
+\label{eq:rcr}
+\end{equation}
+
+\subsubsection{Floor Cavity Ratio Calculus}
+The value of $H$ for the floor cavity ratio ($FCR$) is $0.2m$, and the calculus for $FCR$ is expressed on Equation~\ref{eq:fcr}.
+
+\begin{equation}
+\begin{split}
+FCR & = \frac{5 \times 0.2 \times (53 + 185)}{53 \times 183} \\
+ & = \frac{1 \times 238}{9805} \\
+ & = 0.024 \\
+ & \approx 0.02
+\end{split}
+\label{eq:fcr}
+\end{equation}
+
+\subsubsection{Ceiling Reflectance Calculus}
+Using the same table used to find $\rho_{cc}$, a linear interpolation using the Equation~\ref{eq:lagrange} will be made in order to find the value of the floor cavity reflectance ($\rho_{fc}$). The Equation~\ref{eq:reflectance_fc} shows the calculus.
+
+\begin{equation}
+\begin{split}
+x &= 0.02; \\
+x_1 &= 0.2; \\ y_1 &= 20 \\
+x_2 &= 0.4; \\ y_2 &= 20
+\end{split}
+\qquad
+\begin{split}
+f(x) &= \frac{x_2 - x}{x_2 - x_1} \times y_1 +
+       \frac{x - x_1}{x_2 - x_1} \times y_2 \\
+ &= \frac{0.4 - 0.02}{0.4 - 0.2} \times 20 +
+    \frac{0.02 - 0.2}{0.4 - 0.2} \times 20 \\
+ &= \frac{0.38}{0.2} \times 20 -
+    \frac{0.18}{0.2} \times 20 \\
+ & = 1.9 \times 20 - 0.9 \times 20 \\
+ & = 20 \\
+\rho_{cc} & = 20
+\end{split}
+\label{eq:reflectance_fc}
+\end{equation}
+
